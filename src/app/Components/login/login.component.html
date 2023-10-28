@@ -1,31 +1,31 @@
 <div class="container">
     <div class="login-container">
         <div class="bg-black rounded-4 shadow-5-strong p-5 div-form">
-            <h2>LOGIN</h2>
+            <h2>ACCESO</h2>
             <hr id="separator">
             <img class="avatar" src="../../../assets/logo.svg">
             <div class="justify-content-center">
                 <form class="form">
                     <div class="form-floating mb-3 mt-3">
-                        <input type="text" [(ngModel)]="user.email" (change)="error=false" class="form-control" id="email" placeholder="Enter email" name="email">
-                        <label for="email">Email</label>
+                        <input type="text" [(ngModel)]="user.email" (change)="error=false" class="form-control" id="email" placeholder="ingresa Correo Electrónico" name="email">
+                        <label for="email">Correo Electrónico</label>
                     </div>
 
                     <div class="form-floating mt-3 mb-3">
-                        <input type="password" [(ngModel)]="user.password" (change)="error=false" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-                        <label for="pwd">Password</label>
+                        <input type="password" [(ngModel)]="user.password" (change)="error=false" class="form-control" id="pwd" placeholder="Ingresa Contraseña" name="pswd">
+                        <label for="pwd">Contraseña</label>
                     </div>
                     <div *ngIf="error">
-                        <p class="text-danger">Email or password incorrect</p>
+                        <p class="text-danger">Correo Electrónico o Contraseña Incorrecta</p>
                     </div>
                     <div class="mb-4">
-                        <input type="submit" class="btn btn-success" (click)="login()" value="Sign In">
+                        <input type="submit" class="btn btn-success" (click)="login()" value="Iniciar Sesión">
                     </div>
                 </form>
             </div>
             <hr id="separator">
             <div class="div-login">
-                <p>Don't have an account?<a class="pr" (click)="register()"> Sign up here</a>.</p>
+                <p>¿No Tienes una Cuenta?<a class="pr" (click)="register()"> Registrate Aquí</a>.</p>
             </div>
         </div>
     </div>

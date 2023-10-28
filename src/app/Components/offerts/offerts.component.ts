@@ -59,7 +59,7 @@ export class OffertsComponent {
     })
 
     swalWithBootstrapButtons.fire({
-      title: 'Offer information',
+      title: 'Información de la Oferta',
       html: `
       <div class="row">
         <div class="col-md-6">
@@ -79,36 +79,36 @@ export class OffertsComponent {
       padding: '3em',
       color: '#716add',
       backdrop: `rgba(0,0,0,0.4)`,
-      confirmButtonText: 'Apply for a job',
+      confirmButtonText: 'Solicitar un Trabajo',
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
         if (this.auth.isLogged()) {
           if (offer.rol === this.rol) {
             swalWithBootstrapButtons.fire(
-              'You can not request a service',
-              'You can not request a service to an employee with the same rol as you.',
+              'No puedes solicitar un trabajo',
+              'No puedes solicitar un trabajo a un empleador con el mismo rol que tú.',
               'warning'
             )
           } else if (offer.status === 'Ocupado') {
             swalWithBootstrapButtons.fire(
-              'You can not request a service',
-              'You can not request a service to an employee who is busy.',
+              'No puedes solicitar un trabajo',
+              'No se puede solicitar un trabajo a un empleador que está ocupado.',
               'warning'
             )
           }
           else {
             swalWithBootstrapButtons.fire(
-              'Your request has been sent',
-              'We will contact you soon',
+              'Tu solicitud ha sido enviada',
+              'Su solicitud ha sido enviada, nos comunicaremos con usted pronto.',
               'success'
             )
             this.sentRequest(offer);
           }
         } else {
           swalWithBootstrapButtons.fire(
-            'You must be logged in',
-            'Please log in to apply for a job',
+            'Usted debe estar conectado',
+            'Por favor inicia sesión para solicitar un trabajo',
             'error'
           )
         }
@@ -138,7 +138,7 @@ export class OffertsComponent {
       isAccepted: false
     }
     this.dbService.save(request, 'requests').then(() => {
-      console.log('Request sent');
+      console.log('Solicitud Enviada');
     }).catch(error => {
       console.log(error);
     })

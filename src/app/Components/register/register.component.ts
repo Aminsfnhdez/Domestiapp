@@ -25,8 +25,8 @@ export class RegisterComponent {
   private selectedImage: any = null;
 
   isEdit = false;
-  title = 'Register';
-  btn = 'Sign Up';
+  title = 'Registro';
+  btn = 'Registrarse';
 
   employeed: Empleado = {
     name: '',
@@ -60,8 +60,8 @@ export class RegisterComponent {
 
   changeData() {
     if (this.isEdit) {
-      this.title = 'Setting Profile';
-      this.btn = 'Save';
+      this.title = 'Configuración de Perfil';
+      this.btn = 'Guardar';
       this.type = true;
       this.auth.searchUser().subscribe((data) => {
         this.employeed = data[0];

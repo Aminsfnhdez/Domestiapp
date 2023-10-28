@@ -60,7 +60,7 @@ export class ProfilesComponent {
     })
 
     swalWithBootstrapButtons.fire({
-      title: 'Profile information',
+      title: 'Información del Perfil',
       html: `
       <div class="row">
         <div class="col-md-6">
@@ -81,35 +81,35 @@ export class ProfilesComponent {
       padding: '3em',
       color: '#716add',
       backdrop: `rgba(0,0,0,0.4)`,
-      confirmButtonText: 'Request service',
+      confirmButtonText: 'Solicitar Servicio',
       reverseButtons: true,
     }).then((result) => {
       if (result.isConfirmed) {
         if (this.auth.isLogged()) {
           if (profile.rol === this.rol) {
             swalWithBootstrapButtons.fire(
-              'You can not request a service',
-              'You can not request a service to an employee with the same rol as you.',
+              'No puedes solicitar un servicio.',
+              'No puedes solicitar un servicio a un empleado con el mismo rol que tú.',
               'warning'
             )
           } else if (profile.status === 'Ocupado') {
             swalWithBootstrapButtons.fire(
-              'You can not request a service',
-              'You can not request a service to an employee who is busy.',
+              'No puedes solicitar un servicio.',
+              'No se puede solicitar un servicio a un empleado que está ocupado.',
               'warning'
             )
           } else {
             swalWithBootstrapButtons.fire(
-              'Request sent',
-              'Your request has been sent, we will contact you soon.',
+              'Solicitud enviada',
+              'Su solicitud ha sido enviada, nos comunicaremos con usted pronto.',
               'success'
             )
             this.sentRequest(profile);
           }
         } else {
           swalWithBootstrapButtons.fire(
-            'You need to login',
-            'You need to login to request a service.',
+            'Necesitas iniciar sesión',
+            'Debe iniciar sesión para solicitar un servicio.',
             'warning'
           )
         }
@@ -139,7 +139,7 @@ export class ProfilesComponent {
       isAccepted: false
     }
     this.dbService.save(request, 'requests').then(() => {
-      console.log('Request sent');
+      console.log('Solicitud enviada');
     }).catch(error => {
       console.log(error);
     })

@@ -27,7 +27,7 @@ export class LoginComponent {
       this.router.navigate(['home']);
       window.location.reload();
     }).catch(() => {
-      console.log("User or password incorrect");
+      console.log("Usuario o Contraseña Incorrecta");
       this.error = true;
     });
   }

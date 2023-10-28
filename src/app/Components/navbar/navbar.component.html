@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto ">
                 <li class="nav-item">
-                    <a class="nav-link mx-2" routerLink="/profiles">Profiles / Employees</a>
+                    <a class="nav-link mx-2" routerLink="/profiles">Perfiles / Empleados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" routerLink="/offers">Offers / Employers</a>
+                    <a class="nav-link mx-2" routerLink="/offers">Ofertas / Empleadores</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto" *ngIf="isLogged">
@@ -21,7 +21,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-bell fa-bounce fa-xs"></i> Notifications
+                        <i class="fa-solid fa-bell fa-bounce fa-xs"></i> Notificaciones
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li *ngFor="let notification of notifications">
@@ -43,17 +43,17 @@
                         <i class="fa-solid fa-user fa-bounce fa-xs"></i> {{name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" (click)="settingProfile()">Settings</a></li>
-                        <li><a class="dropdown-item" (click)="signOut()">Sign out</a></li>
+                        <li><a class="dropdown-item" (click)="settingProfile()">Ajustes</a></li>
+                        <li><a class="dropdown-item" (click)="signOut()">Salir</a></li>
                     </ul>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto" *ngIf="!isLogged">
                 <li class="nav-item">
-                    <a class="nav-link mx-2" routerLink="/sign-in">Sign in</a>
+                    <a class="nav-link mx-2" routerLink="/sign-in">Iniciar Sesión</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" routerLink="/sign-up">Sign up</a>
+                    <a class="nav-link mx-2" routerLink="/sign-up">Regístrate</a>
                 </li>
             </ul>
         </div>
