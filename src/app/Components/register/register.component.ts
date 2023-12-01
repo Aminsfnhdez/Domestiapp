@@ -26,7 +26,7 @@ export class RegisterComponent {
 
   isEdit = false;
   title = 'Registro';
-  btn = 'Registrarse';
+  btn = 'Aceptar y Registrarse';
 
   employeed: Empleado = {
     name: '',
