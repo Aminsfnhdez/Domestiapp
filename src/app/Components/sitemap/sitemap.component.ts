@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class SitemapComponent {
   index = false;
   type = false;
-  imgSrc1 ="../../../assets/images/Manual-0001.jpg";
-  imgSrc2 = "../../../assets/images/Manual-0002.png";
+  imgSrc1 = "../../../assets/images/Manual-0001.jpg";
+  imgSrc2 = "../../../assets/images/Manual-0002.jpg";
   imgSrc3 = "../../../assets/images/Manual-0003.jpg";
   imgSrc4 = "../../../assets/images/Manual-0004.jpg";
   imgSrc5 = "../../../assets/images/Manual-0005.jpg";
